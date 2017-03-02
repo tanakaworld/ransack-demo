@@ -15,6 +15,10 @@
       <%= f.label :name %>
       <%= f.text_field :name_cont, placeholder: 'Name' %>
 
+      <%= f.label :birthday %>
+      <%= f.date_field :birthday_gteq, include_blank: true %> 〜　
+      <%= f.date_field :birthday_lteq, include_blank: true %>
+
       <br>
       <%= f.submit 'Search' %>
   <% end %>
