@@ -19,6 +19,11 @@
       <%= f.date_field :birthday_gteq, include_blank: true %> 〜　
       <%= f.date_field :birthday_lteq, include_blank: true %>
 
+      <%= f.label :birthday_during_year %>
+      <%= f.date_select :birthday_during_year,
+                        discard_day: true, discard_month: true,
+                        include_blank: true %>
+
       <br>
       <%= f.submit 'Search' %>
   <% end %>
