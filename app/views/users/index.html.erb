@@ -11,6 +11,15 @@
   </tr>
   </thead>
 
+  <%= search_form_for @q, url: :users do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name_cont, placeholder: 'Name' %>
+
+      <br>
+      <%= f.submit 'Search' %>
+  <% end %>
+
+
   <tbody>
   <% @users.each do |user| %>
       <tr>
